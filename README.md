@@ -8,7 +8,8 @@
 ## 機能  
 ### ユーザー情報管理  
 **【新規ユーザー登録画面】**  
-任意のUSER NAMEとPASSWORDを入力することで登録可能です。  
+<img src="https://github.com/r-nagasawa/portfolio/assets/108414632/0f266d77-af41-4734-b6ba-bf5f1e14ddfb" width="200px">
+
 ただし、既に登録されているUSER NAMEと同じものは登録できないようになっています。  
 また入力欄に空白があるとアラートメッセージが表示されます。  
 
