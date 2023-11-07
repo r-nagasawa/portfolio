@@ -15,7 +15,7 @@
 **【ログイン画面】**  
 
 
-<img src="https://github.com/r-nagasawa/portfolio/assets/108414632/283b911b-afe2-4874-be1c-d8e621b7673f" width="100px">
+<img src="https://github.com/r-nagasawa/portfolio/assets/108414632/283b911b-afe2-4874-be1c-d8e621b7673f" width="200px">
 
 
 登録済みのUSER NAMEとPASSWORDを入力することでログインができます。  
