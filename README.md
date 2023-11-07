@@ -14,7 +14,9 @@
 
 **【ログイン画面】**  
 
-<img src="https://github.com/r-nagasawa/portfolio/issues/1#issue-1980819464" width="100">
+
+<img src="https://github.com/r-nagasawa/portfolio/issues/1#issue-1980819464" width="50">
+
 
 登録済みのUSER NAMEとPASSWORDを入力することでログインができます。  
 入力欄に空欄があるとアラートメッセージが表示されます。  
