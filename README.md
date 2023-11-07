@@ -13,7 +13,9 @@
 また入力欄に空白があるとアラートメッセージが表示されます。  
 
 **【ログイン画面】**  
-<img src="https://github.com/r-nagasawa/portfolio/issues/1#issue-1980819464" width="100">  
+
+<img src="https://github.com/r-nagasawa/portfolio/issues/1#issue-1980819464" width="100">
+
 登録済みのUSER NAMEとPASSWORDを入力することでログインができます。  
 入力欄に空欄があるとアラートメッセージが表示されます。  
 登録されていない情報が入力されると画面遷移はせずに、入力した値のみが消えます。  
