@@ -37,18 +37,18 @@
 「管理ページに戻る」をクリックすることで商品管理ページに遷移します。  
 
 **全商品一覧表示**  
-<img src="" width="200px">  
+<img src="https://github.com/r-nagasawa/portfolio/assets/108414632/a83858e4-fba0-42fe-a1dc-1d1c043fda0f" width="200px">  
 ボタンをクリックするとこれまでに登録した商品の一覧が表示されます。  
 表の中には変更ボタンと削除ボタンが実装されています。  
 
 *変更機能*  
-<img src="" width="200px">  
+<img src="https://github.com/r-nagasawa/portfolio/assets/108414632/2a78df5a-e951-45cc-ba55-4a78bbe07763" width="200px">  
 変更ボタンをクリックすると編集画面に遷移します。  
 変更箇所を編集して完了を押すことで、変更が完了します。  
 入力欄が空欄の場合はアラートが出ます。  
 
 *削除機能*  
-<img src="" width="200px">  
+<img src="https://github.com/r-nagasawa/portfolio/assets/108414632/ab27aeeb-171f-48bc-9abf-757ba53a9ca3" width="200px">  
 削除ボタンをクリックすると確認画面へ遷移します。  
 「はい」で削除、「いいえ」で操作キャンセルが出来ます。
 
