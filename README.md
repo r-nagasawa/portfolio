@@ -15,7 +15,7 @@
 **【ログイン画面】**  
 
 
-![from_issues](https://github.com/r-nagasawa/portfolio/issues/1#issue-1980819464)
+![from_issues]
 
 
 登録済みのUSER NAMEとPASSWORDを入力することでログインができます。  
