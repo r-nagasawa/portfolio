@@ -25,7 +25,7 @@
 
 ## 商品情報管理
 **【商品管理ページ】**  
-<img src="" width="200px">
+<img src="https://github.com/r-nagasawa/portfolio/assets/108414632/561b0c29-f504-46df-a8dc-a3e735594b0b" width="200px">
 新規商品登録ボタン、全商品一覧表示ボタン、商品検索欄、ログアウトボタンを実装しています。  
 
 **新規商品登録**  
