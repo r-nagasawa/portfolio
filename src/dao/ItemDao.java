@@ -55,7 +55,6 @@ public class ItemDao {
 	//登録するユーザーネームが既にあるものかどうか判断する
 	public boolean doubleCheck(String name) throws SQLException{
 		sql = "select * from user where name = ?";
-		//boolean flag = true;
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, name);
@@ -255,7 +254,6 @@ public class ItemDao {
 	//登録するitemと同じ名前のitemがないかのチェック
 	/*public boolean WCheck(String name) throws SQLException{
 		sql = "select * from item where name = ?";
-		//boolean flag = true;
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, name);
