@@ -15,9 +15,6 @@ p{
 <body>
 	<h2>処理結果</h2>
 	<p>${message}</p>
-	<form>
-	<INPUT type="button" value="${tag}ページに戻る" onClick="history.back()">
-	</form>
 	<br>
 	<Input type="button" value="管理ページに戻る" onClick="location.href='ManageServlet'">
 </body>

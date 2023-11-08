@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <title>edit</title>
-
+<link rel="stylesheet" type="text/css" href="Main.css">
 <script src="Check.js" type="text/javascript" charset="UTF-8"></script>
 </head>
 <body>

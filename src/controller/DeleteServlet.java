@@ -59,7 +59,7 @@ public class DeleteServlet extends HttpServlet {
 		}
 		
 		ServletContext context = getServletContext();
-		RequestDispatcher dis = context.getRequestDispatcher("/result.jsp");
+		RequestDispatcher dis = context.getRequestDispatcher("/resultDelete.jsp");
 		dis.forward(request, response);
 	}
 }

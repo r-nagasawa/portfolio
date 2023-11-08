@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <title>manage</title>
-
+<link rel="stylesheet" type="text/css" href="Main.css">
 <script src="Check.js" type="text/javascript" charset="UTF-8"></script>
 </head>
 <body>
@@ -84,9 +84,9 @@
 			</c:forEach>
 		</table>
 	</c:if>
-	<form action="LoginServlet" method="get">
-		<br>
-		<button name="btn" value="logout">ログアウト</button>
-	</form>
+	<br>
+	<br>
+	<Input type="button" value="マイページ" name="myPage" onClick="location.href='userPrf.jsp'">
+	<Input type="button" value="ログアウト" name="logout" onClick="location.href='LoginServlet'">
 </body>
 </html>

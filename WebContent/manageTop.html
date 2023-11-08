@@ -3,18 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <title>Manage Ligin</title>
+<link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <body>
 	<h2>ログインページ</h2>
 	<form action="LoginServlet" method="post">
 		<p>USER NAME</p>
 		<input type="text" name="name">
+		<br>
+		<br>
 		<p>PASSWORD</p>
 		<input type="text" name="pass">
-		<button>login</button>
+		<br>
+		<br>
+		<button name="login">login</button>
 	</form>
 	<br>
-	<form action="UserServlet" method="get">
+	<h5>ユーザー登録がまだの方はこちら</h5>
+	<form action="UserServlet" method="get" name="userAd">
 		<button>ユーザー新規登録</button>
 	</form>
 </body>

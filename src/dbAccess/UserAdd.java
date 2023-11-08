@@ -38,6 +38,7 @@ public class UserAdd implements DBAccess {
 					request.setAttribute("message", "ユーザー登録が完了しました");
 				} else {
 					request.setAttribute("message", "ユーザー登録に失敗しました");
+					request.setAttribute("message2", "このユーザー名は使用できません");
 				}	
 				
 			}finally {

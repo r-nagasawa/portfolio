@@ -40,7 +40,7 @@ public class InsertServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		dbAccess = new InsertItem();
-		
+		request.setAttribute("tag", "登録");
 		try {
 			dbAccess.execute(request);
 		} catch (SQLException e) {

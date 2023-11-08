@@ -6,11 +6,11 @@
 <head>
 <meta charset="utf-8">
 <title>insert</title>
+<link rel="stylesheet" type="text/css" href="Main.css">
 <script src="Check.js" type="text/javascript" charset="UTF-8"></script>
 </head>
 <body>
 	<h2>商品登録</h2>
-	<a href="http://localhost:8080/webExam2/ManageServlet">管理ページに戻る</a>
 	<form action="InsertServlet" method="post" name="insert">
 		<table border="1">
 			<tr>
@@ -35,6 +35,9 @@
 		</table>
 		<br>
 		<button onClick="return check()">登録</button>
+		<br>
+		<br>
+		<a href="http://localhost:8080/webExam2/ManageServlet">管理ページに戻る</a>
 		
 		<c:if test="${message != null }">
 			<p>${message}</p>

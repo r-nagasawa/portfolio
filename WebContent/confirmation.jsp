@@ -5,6 +5,7 @@
 <head>
 <meta charset="utf-8">
 <title>confirm</title>
+<link rel="stylesheet" type="text/css" href="Main.css">
 </head>
 <body>
 	<h2>以下の商品を削除します</h2>

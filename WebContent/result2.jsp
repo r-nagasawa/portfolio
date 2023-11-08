@@ -5,6 +5,7 @@
 <head>
 <meta charset="utf-8">
 <title>User result</title>
+<link rel="stylesheet" type="text/css" href="Style.css">
 <style>
 p{
 	color: red;
@@ -14,6 +15,7 @@ p{
 <body>
 	<h2>処理結果</h2>
 	<p>${message}</p>
+	<p>${message2}</p>
 	<a href="http://localhost:8080/webExam2/LoginServlet">ログインページに戻る</a>
 	<br>
 	<br>

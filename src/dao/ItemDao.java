@@ -52,6 +52,7 @@ public class ItemDao {
 		}
 	}
 	
+	//登録するユーザーネームが既にあるものかどうか判断する
 	public boolean doubleCheck(String name) throws SQLException{
 		sql = "select * from user where name = ?";
 		//boolean flag = true;
@@ -123,6 +124,12 @@ public class ItemDao {
 		String sql = "select * from item";
 		ps = con.prepareStatement(sql);
 		return search(ps);
+	}
+	
+	public ArrayList<UserDto> getUserAll() throws SQLException {
+		String sql = "select * from user";
+		ps = con.prepareStatement(sql);
+		return userSearch(ps);
 	}
 
 	/**
@@ -221,6 +228,23 @@ public class ItemDao {
 		return list;
 	}
 	
+	private ArrayList<UserDto> userSearch(PreparedStatement ps)throws SQLException{
+		try {
+			rs = ps.executeQuery(); 
+			Userlist = new ArrayList<UserDto>();
+			UserDto dto;
+			while(rs.next()) {
+				dto = new UserDto();
+				dto.setName(rs.getString("name"));
+				dto.setPass(rs.getString("password"));
+				Userlist.add(dto);
+			}
+		}finally {
+			ps.close();
+		}
+		return Userlist;
+	}
+	
 	/**
 	 * 画面から受け取ったデータをDBに挿入するメソッド
 	 * @param dto (パラメータをまとめてもつオブジェクト)
@@ -228,6 +252,26 @@ public class ItemDao {
 	 * @throws SQLException
 	 */
 
+	//登録するitemと同じ名前のitemがないかのチェック
+	/*public boolean WCheck(String name) throws SQLException{
+		sql = "select * from item where name = ?";
+		//boolean flag = true;
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setString(1, name);
+			rs = ps.executeQuery(); 
+			
+			
+			if(rs.next()) {
+				return false;
+			}else {
+				return true;
+			}
+		}finally {
+			ps.close();
+		}
+	}*/
+	
 	//insertメソッド
 	public int insert(ItemDto dto) throws SQLException{
 		sql = "insert into item (code, name, category, price)values(?,?,?,?)";
