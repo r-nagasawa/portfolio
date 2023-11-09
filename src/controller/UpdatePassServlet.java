@@ -16,8 +16,8 @@ import dbAccess.UpdatePass;
 import dbAccess.SelectOne;
 
 /**
- * 商品情報編集時に呼び出されるサーブレット<br>
- * ・doGet...編集対象の商品情報をDBから取得し、編集ページに遷移<br>
+ * password編集時に呼び出されるサーブレット<br>
+ * ・doGet...編集対象のUserをDBから取得し、編集ページに遷移<br>
  * ・doPost...更新処理を呼び出し、結果表示ページに遷移
  */
 @WebServlet("/UpdatePassServlet")

@@ -21,7 +21,7 @@
 		<p>よろしいですか？</p>
 		<button name="btn" value="yes" onClick="return editCheck()">はい</button>
 		<button name="btn" value="no">いいえ</button>
-		<input type="hidden" name="code" value="${user.name}">
+		<input type="hidden" name="code" value="${user.id}">
 	</form>
 </body>
 </html>
