@@ -9,6 +9,8 @@ package dto;
  *
  */
 public class UserDto {
+	
+	int id;
 
 	/**
 	 * 商品ID
@@ -19,6 +21,14 @@ public class UserDto {
 	 * 商品コード
 	 */
 	String password;
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 	
 	public String getName() {
 		return name;

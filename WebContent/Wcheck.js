@@ -1,4 +1,5 @@
 
+/*
 let wCheck = new XMLHttpRequest();
 wCheck.open('Post', 'jdbc:mysql://localhost:3306/javaexam?serverTimezone=UTC', true)
 wCheck.responseType = 'json'
@@ -20,4 +21,4 @@ wCheck.onload = function(e) {
 
     }
   }
-}
+}*/

@@ -18,7 +18,7 @@
  	<th>PASSWORD</th>
 </table>
 <br>
-<input type="button" value="PASSWORDを変更" onClick="location.href='ManageServlet'">
+<input type="button" value="PASSWORDを変更" onClick="location.href='pass.jsp'">
 <br>
 <br>
 <a href="http://localhost:8080/webExam2/ManageServlet">商品管理ページに戻る</a>

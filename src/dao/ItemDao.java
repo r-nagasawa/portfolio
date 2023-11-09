@@ -145,6 +145,14 @@ public class ItemDao {
 		return search(ps).get(0);
 	}
 	
+	public UserDto getUser(int id) throws SQLException{
+		
+		sql = "select * from user where id = ?";
+		ps = con.prepareStatement(sql);
+		ps.setInt(1, id);
+		return userSearch(ps).get(0);
+	}
+	
 	/**
 	 * DBから名前検索
 	 * @param name 商品名
@@ -305,6 +313,20 @@ public class ItemDao {
 			ps.setString(2, dto.getCategory());
 			ps.setInt(3, dto.getPrice());
 			ps.setInt(4, dto.getCode());
+			n = ps.executeUpdate();
+		}finally {
+			ps.close();
+		}
+		return n;
+	}
+	
+	public int update(UserDto dto) throws SQLException {
+		sql = "update user set password = ? where id = ?";
+		int n = 0;
+		try {
+			ps.setInt(1, dto.getId());
+			ps.setString(2, dto.getPass());
+			ps = con.prepareStatement(sql);
 			n = ps.executeUpdate();
 		}finally {
 			ps.close();
