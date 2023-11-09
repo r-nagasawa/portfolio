@@ -4,7 +4,7 @@ import java.sql.SQLException;
 //import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
-//import javax.swing.JOptionPane;
+
 
 import dao.ItemDao;
 import dto.ItemDto;
@@ -29,16 +29,11 @@ public class InsertItem implements DBAccess {
 			
 			try {
 				dao = new ItemDao();
-				//boolean check = dao.WCheck(name);
+				boolean check = dao.WCheck(name);
 				
-				//if(check) {
+				if(check) {
 					n = dao.insert(dto);
-				//}
-				
-				//int log1 = JOptionPane.showConfirmDialog(null, "既に同じ名前の商品が登録されています。登録しますか？");
-				//if(log1 == JOptionPane.YES_OPTION) {
-						//n = dao.insert(dto);
-					//}
+				} 
 
 				
 				

@@ -34,7 +34,7 @@
 			</tr>
 		</table>
 		<br>
-		<button onClick="return check()">登録</button>
+		<button id="btn" onClick="return check()">登録</button>
 		<br>
 		<br>
 		<a href="http://localhost:8080/webExam2/ManageServlet">管理ページに戻る</a>

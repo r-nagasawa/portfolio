@@ -252,7 +252,7 @@ public class ItemDao {
 	 */
 
 	//登録するitemと同じ名前のitemがないかのチェック
-	/*public boolean WCheck(String name) throws SQLException{
+	public boolean WCheck(String name) throws SQLException{
 		sql = "select * from item where name = ?";
 		try {
 			ps = con.prepareStatement(sql);
@@ -268,7 +268,7 @@ public class ItemDao {
 		}finally {
 			ps.close();
 		}
-	}*/
+	}
 	
 	//insertメソッド
 	public int insert(ItemDto dto) throws SQLException{
