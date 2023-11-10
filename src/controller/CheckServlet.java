@@ -16,18 +16,19 @@ import org.apache.catalina.connector.Response;
 import dao.ItemDao;
 import dbAccess.DBAccess;
 import dbAccess.InsertItem;
+import dto.ItemDto;
 
 
 /**
  * 商品登録時に呼び出されるサーブレット<br>
- * ・doGet...商品登録ページに遷移<br>
- * ・doPost...DBへの登録処理の呼び出し
+ * ・doGet...
+ * ・doPost...
  */
 @WebServlet("/insert")
 public class CheckServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static DBAccess dbAccess;
-	InsertItem item = new InsertItem();
+	ItemDto dto = new ItemDto();
 	
 
 	/**
@@ -35,7 +36,10 @@ public class CheckServlet extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Response.json(response, item.execute());
+		Response.json(response, dto.getName());
+		/*int id = getId(request);
+		String name = request.getParameter("name");
+		Response.json(response, dto.setName(name));*/
 		
 		/*
 		 * ServletContext context = getServletContext();
@@ -44,12 +48,14 @@ public class CheckServlet extends HttpServlet {
 		*/
 	}
 
+
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    String name = request.getParameter("name");
-	    Response.json(response, item.getItemsAll(name));
+	    Response.json(response, dto.setName(name));
 	    
 		
 
