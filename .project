@@ -34,5 +34,15 @@
 			<type>1</type>
 			<location>C:/Javascript/image/white_back.jpg</location>
 		</link>
+		<link>
+			<name>WebContent/WEB-INF/lib/jackson-core-2.16.0-rc1.jar</name>
+			<type>1</type>
+			<location>C:/jackson-core-2.16.0-rc1.jar</location>
+		</link>
+		<link>
+			<name>WebContent/WEB-INF/lib/jackson-databind-2.16.0-rc1.jar</name>
+			<type>1</type>
+			<location>C:/jackson-databind-2.16.0-rc1.jar</location>
+		</link>
 	</linkedResources>
 </projectDescription>

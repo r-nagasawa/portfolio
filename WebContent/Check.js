@@ -13,8 +13,7 @@ function check(){
 	}else if(price.value==""){
 		alert("価格を入力してください。");
 		return false;
-	}else if(insert.name.value == ItemDto.value){
-		window.confirm("同じ名前の商品があります。登録しますか？");
+	}else {
 		return true;
 	}
 }

@@ -1,24 +1,17 @@
 
-/*
+
 let wCheck = new XMLHttpRequest();
-wCheck.open('Post', 'jdbc:mysql://localhost:3306/javaexam?serverTimezone=UTC', true)
-wCheck.responseType = 'json'
-wCheck.send(null)
-wCheck.onload = function(e) {
-  if (wCheck.readyState == 4) {
-    if (wCheck.status == 200 ) {
 
-      let btn = document.getElementById('btn');
-      let users = wCheck.response;
+wCheck.onreadystatechange = function(){
+	if(wCheck.readyState == 4){
+		if(wCheck.status == 200){
+			let data = request.responseText;
+			console.log(data);
+		}
+	}
+}
 
-      btn.addEventListener('click', function() {
-        users.forEach(function (user) {
-          let li = document.createElement('li');
-          li.innerText = user.name
-          lists.appendChild(li)
-        });
-      });
+wCheck.open('GET', 'jdbc:mysql://localhost:3306/javaexam?serverTimezone=UTC', true)
+request.send(null);
 
-    }
-  }
-}*/
+

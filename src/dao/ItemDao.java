@@ -1,5 +1,6 @@
 package dao;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -8,10 +9,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 //import java.util.stream.Collectors;
 
+import javax.servlet.http.HttpServletResponse;
+
 import dto.ItemDto;
 import dto.UserDto;
-//import dto.MessageDto;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * DBとの接続、操作、切断を処理するクラス<br>
  * Dao...Data Access Objectの略
@@ -51,6 +53,19 @@ public class ItemDao {
 			e.printStackTrace();
 		}
 	}
+	
+	public class Response {
+		  private final ObjectMapper OM = new ObjectMapper();
+		  public void json(HttpServletResponse responce, Object toJson)
+		    throws IOException
+		  {
+			 responce.setContentType("application/json");
+			 responce.getWriter().print(
+		      OM.writeValueAsString(toJson)
+		    );
+		  }
+		}
+	
 	
 	//登録するユーザーネームが既にあるものかどうか判断する
 	public boolean doubleCheck(String name) throws SQLException{

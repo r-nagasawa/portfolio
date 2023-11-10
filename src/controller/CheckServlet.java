@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.catalina.connector.Response;
+
+import dao.ItemDao;
 import dbAccess.DBAccess;
 import dbAccess.InsertItem;
 
@@ -20,36 +23,35 @@ import dbAccess.InsertItem;
  * ・doGet...商品登録ページに遷移<br>
  * ・doPost...DBへの登録処理の呼び出し
  */
-@WebServlet("/CheckServlet")
+@WebServlet("/insert")
 public class CheckServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static DBAccess dbAccess;
+	InsertItem item = new InsertItem();
+	
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ServletContext context = getServletContext();
+		Response.json(response, item.execute());
+		
+		/*
+		 * ServletContext context = getServletContext();
 		RequestDispatcher dis = context.getRequestDispatcher("/insert.jsp");
 		dis.forward(request, response);
+		*/
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	    String name = request.getParameter("name");
+	    Response.json(response, item.getItemsAll(name));
+	    
 		
-		dbAccess = new InsertItem();
-		request.setAttribute("tag", "登録");
-		try {
-			dbAccess.execute(request);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		ServletContext context = getServletContext();
-		RequestDispatcher dis = context.getRequestDispatcher("/result.jsp");
-		dis.forward(request, response);
-	}
 
+	}
 }
