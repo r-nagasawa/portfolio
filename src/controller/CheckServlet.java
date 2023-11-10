@@ -28,7 +28,7 @@ import dto.ItemDto;
 public class CheckServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static DBAccess dbAccess;
-	ItemDto dto = new ItemDto();
+	ItemDao dao = new ItemDao();
 	
 
 	/**
@@ -36,7 +36,7 @@ public class CheckServlet extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Response.json(response, dto.getName());
+		Response.json(response, dto.getItemName(null));
 		/*int id = getId(request);
 		String name = request.getParameter("name");
 		Response.json(response, dto.setName(name));*/

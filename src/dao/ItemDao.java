@@ -147,6 +147,20 @@ public class ItemDao {
 	}
 
 	/**
+	 * 11/10追記
+	 * DBから1レコードを抽出する(nameで検索)
+	 * @param name 抽出したいname
+	 * @return 該当データ
+	 * @throws SQLException
+	 */
+	public ItemDto getItemName(String name) throws SQLException{
+		ItemDao dao = new ItemDao();
+		sql = "select * from item where name = ?";
+		ps = con.prepareStatement(sql);
+		ps.setString(1, name);
+		return search(ps).get(0);
+	}
+	/**
 	 * DBから1レコードを抽出する(商品コードで検索)
 	 * @param code 抽出したい商品コード
 	 * @return 該当データ
